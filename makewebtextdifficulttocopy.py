@@ -131,15 +131,11 @@ try:
         else:
             pass
     
-    outputtext = str(letterlist)
-
-    outputtext = outputtext.replace("', '", "")
-    outputtext = outputtext.replace("[", "")
-    outputtext = outputtext.replace("]", "")
+    outputtext = '',join(letterlist)
 
     print("Now the text is fully converted to hard-to-copy-as-text html code. You can copy it from below into your html file, note: please remove the single quotes from the beginning and end of the text below before posting! The CSS file needed to show the text as text can be found on https://github.com/Stehlampe2020/MakeWebTextDifficultToCopy, together with this program.\n\n" + outputtext + "\n\nNow the text is fully converted to hard-to-copy-as-text html code. You can copy it from above into your html file, note: please remove the single quotes from the beginning and end of the text above before posting! The CSS file needed to show the text as text can be found on https://github.com/Stehlampe2020/MakeWebTextDifficultToCopy, together with this program.")
 
 except KeyboardInterrupt:
-    print("\n\nExecution was canceled by a KeyboardInterrupt!\n\n")
+    print("\n\nExecution was cancelled by a KeyboardInterrupt!\n\n")
     os.remove("./.inputtext")
     pass
